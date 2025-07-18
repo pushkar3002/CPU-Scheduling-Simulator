@@ -1,73 +1,137 @@
-CPU Scheduling Simulator
-An interactive, web-based tool designed to visualize and compare the performance of various CPU scheduling algorithms. This simulator provides a hands-on learning experience for students and enthusiasts of operating systems.
+---
 
-Developed by Pushkar Lal.
+````markdown
+# 🧠 CPU Scheduling Simulator
 
-🚀 Features
-Interactive Process Management: Easily add, remove, or modify processes with custom Arrival Times, Burst Times, and Priorities.
+An interactive, web-based tool designed to **visualize and compare the performance of various CPU scheduling algorithms**. This simulator provides a hands-on learning experience for students and enthusiasts of operating systems.
 
-Multiple Scheduling Algorithms: Simulate and visualize four fundamental CPU scheduling algorithms:
+> Developed by **Pushkar Lal**
 
-First-Come, First-Served (FCFS)
+---
 
-Shortest Job First (SJF) (Non-Preemptive)
+## 🚀 Features
 
-Priority Scheduling (Non-Preemptive)
+- **🎛️ Interactive Process Management**  
+  Easily add, remove, or modify processes with custom **Arrival Times**, **Burst Times**, and **Priorities**.
 
-Round Robin (RR)
+- **🧮 Multiple Scheduling Algorithms**  
+  Simulate and visualize four fundamental CPU scheduling algorithms:
+  - First-Come, First-Served (FCFS)
+  - Shortest Job First (SJF) *(Non-Preemptive)*
+  - Priority Scheduling *(Non-Preemptive)*
+  - Round Robin (RR)
 
-Dynamic Gantt Chart: See a real-time, color-coded Gantt chart that illustrates how processes are executed on the CPU over time.
+- **📊 Dynamic Gantt Chart**  
+  Real-time, color-coded Gantt chart that illustrates how processes are executed on the CPU over time.
 
-Detailed Performance Metrics: Get instant feedback on key performance indicators, including average waiting time and average turnaround time.
+- **📈 Detailed Performance Metrics**  
+  Get instant feedback on:
+  - Average Waiting Time
+  - Average Turnaround Time
 
-Aesthetic & Modern UI: A clean, responsive interface with smooth animations and a stylish 3D background powered by three.js.
+- **✨ Modern & Aesthetic UI**  
+  Clean, responsive design with **smooth animations** and a stylish **3D background** powered by [three.js](https://threejs.org).
 
-⚙️ How It Works
-The simulator is designed to be intuitive and easy to use. Here’s a step-by-step guide:
+---
 
-1. Managing Processes
-The Process List card on the left is your control center for defining the workload.
+## ⚙️ How It Works
 
-Add a Process: Click the "Add Process" button to add a new process to the list. It will appear with default values.
+### 1. Managing Processes
 
-Modify a Process: You can directly edit the Arrival time, Burst time, and Priority for any process by clicking on its value in the table and typing a new number.
+Use the **Process List** panel to define your workload:
 
-Remove a Process: Click the red "×" button at the end of a process row to delete it.
+- ➕ **Add a Process**: Click `Add Process` to append a new row with default values.
+- 📝 **Modify a Process**: Click on the values in the table to edit **Arrival**, **Burst**, or **Priority**.
+- ❌ **Remove a Process**: Click the red `×` to delete a process row.
+- 🔄 **Reset Defaults**: Click `Reset Defaults` to reload sample processes.
 
-Reset: Click the "Reset Defaults" button to clear the current list and load the initial set of sample processes.
+---
 
-2. Running a Simulation
-Once you have set up your desired processes, you can run a simulation.
+### 2. Running a Simulation
 
-Select an Algorithm: Choose the scheduling algorithm you want to visualize from the "Algorithm" dropdown menu in the "Controls" card.
+- 🔽 **Select an Algorithm**: Use the dropdown to choose a scheduling algorithm.
+- ⏱ **Set Time Quantum** (if using RR): An input will appear to specify the quantum.
+- ▶️ **Simulate**: Hit `Simulate` to generate the results and visual output.
 
-Set Time Quantum (for Round Robin): If you select "Round Robin", an input field for the Time Quantum will appear. You can set the time slice value here.
+---
 
-Simulate: Click the "Simulate" button. The Gantt chart and Results table on the right will instantly update to reflect the simulation's outcome.
+### 3. Understanding the Output
 
-3. Understanding the Output
-The results of the simulation are displayed in two main areas:
+#### 📍 Gantt Chart
+A visual timeline showing which process is executing when:
+- Color-coded bars for each `P_id`
+- Gray "Idle" bars indicate CPU is waiting for arriving processes
+- Timeline labels show execution end times
 
-Gantt Chart: This visual timeline shows which process (represented by a colored bar labeled P_id) is running on the CPU at any given moment. Idle blocks indicate periods where the CPU was waiting for a process to arrive. The numbers on the timeline below the chart mark the completion time of each execution block.
+#### 📊 Results Table
+Detailed breakdown for each process:
 
-Results Table: This table provides a detailed breakdown of each process's journey through the system:
+| Column       | Description |
+|--------------|-------------|
+| `PID`        | Process ID |
+| `Arrival`    | Arrival time |
+| `Burst`      | CPU time needed |
+| `Priority`   | Lower value = higher priority |
+| `Start`      | First time on CPU |
+| `Completion` | When process finishes |
+| `Waiting Time` | Turnaround - Burst |
+| `Turnaround Time` | Completion - Arrival |
 
-PID: The unique Process ID.
+Below the table, you’ll also find:
+- 📉 **Average Waiting Time**
+- 📊 **Average Turnaround Time**
 
-Arrival: The time the process entered the ready queue.
+These help you **compare the efficiency** of different scheduling strategies.
 
-Burst: The total CPU time required by the process.
+---
 
-Priority: The priority level of the process (lower number = higher priority).
+## 🛠 Tech Stack
 
-Start: The time the process first gets access to the CPU.
+- **Frontend**: HTML, CSS, JavaScript
+- **UI Library**: [Bootstrap](https://getbootstrap.com)
+- **3D Background**: [Three.js](https://threejs.org)
 
-Completion: The time the process finishes its execution.
+---
 
-Waiting Time: The total time the process spent waiting in the ready queue (Turnaround Time - Burst Time).
+## 📸 Demo Screenshots
 
-Turnaround Time: The total time from arrival to completion (Completion Time - Arrival Time).
+> *(Add screenshots here if available)*
 
-Average Metrics: Below the results table, you can find the average waiting and turnaround times for all processes, which are key indicators for comparing algorithm efficiency.
+---
+
+## 📦 Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/your-username/cpu-scheduling-simulator.git
+cd cpu-scheduling-simulator
+````
+
+Then simply open `index.html` in your browser:
+
+```bash
+start index.html
+```
+
+---
+
+## 🙌 Contributions
+
+Contributions, suggestions, and bug reports are welcome!
+Feel free to fork the repo and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+> 💡 *Learn by doing — visualize how CPU scheduling algorithms work in real time!*
+
+```
+
 
 
