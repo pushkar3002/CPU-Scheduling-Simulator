@@ -1,5 +1,3 @@
----
-
 ````markdown
 # 🧠 CPU Scheduling Simulator
 
@@ -91,13 +89,6 @@ These help you **compare the efficiency** of different scheduling strategies.
 - **UI Library**: [Bootstrap](https://getbootstrap.com)
 - **3D Background**: [Three.js](https://threejs.org)
 
----
-
-## 📸 Demo Screenshots
-
-> *(Add screenshots here if available)*
-
----
 
 ## 📦 Installation
 
@@ -129,9 +120,5 @@ This project is licensed under the **MIT License**.
 
 ---
 
-> 💡 *Learn by doing — visualize how CPU scheduling algorithms work in real time!*
-
-```
-
-
+> 💡 *Learn by doing — viz
 
